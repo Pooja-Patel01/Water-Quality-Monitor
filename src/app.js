@@ -9,10 +9,17 @@ import Search from "./pages/Search";
 import Profile from "./pages/Profile";
 import StationReadings from "./pages/StationReadings";
 import AuthLayout from "./components/AuthLayout";
+import Alerts from "./pages/Alerts";
+import NGODashboard from "./pages/NGODashboard";
+import AuthorityDashboard from "./pages/AuthorityDashboard";
+import PredictiveAlertBanner from "./components/PredictiveAlertBanner";
 
 function App() {
+  const token = localStorage.getItem("token");
+
   return (
     <BrowserRouter>
+      {token && <PredictiveAlertBanner />}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
@@ -23,6 +30,9 @@ function App() {
         <Route path="/search" element={<AuthLayout><Search /></AuthLayout>} />
         <Route path="/profile" element={<AuthLayout><Profile /></AuthLayout>} />
         <Route path="/readings" element={<AuthLayout><StationReadings /></AuthLayout>} />
+        <Route path="/alerts" element={<AuthLayout><Alerts /></AuthLayout>} />
+        <Route path="/ngo/dashboard" element={<AuthLayout><NGODashboard /></AuthLayout>} />
+        <Route path="/authority/dashboard" element={<AuthLayout><AuthorityDashboard /></AuthLayout>} />
         <Route path="*" element={<div>Page Not Found</div>} />
       </Routes>
     </BrowserRouter>
