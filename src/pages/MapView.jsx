@@ -32,7 +32,7 @@ const MapView = () => {
             onClick={() => navigate("/dashboard")}
             className="bg-white text-sky-600 px-4 py-1.5 rounded-lg font-bold shadow hover:bg-sky-50 transition-colors"
           >
-            ← Back to Dashboard
+            â† Back to Dashboard
           </button>
           <h2 className="text-xl font-bold">Live Water Quality Map</h2>
         </div>

@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Search = () => {
@@ -32,15 +32,15 @@ const Search = () => {
   return (
     <div className="min-h-screen flex bg-sky-50 font-sans">
       <div className="w-64 bg-sky-600 text-white flex flex-col p-6 shadow-xl">
-        <h2 className="text-2xl font-bold mb-8 italic">💧 WQM</h2>
+        <h2 className="text-2xl font-bold mb-8 italic">ðŸ’§ WQM</h2>
         <ul className="space-y-2 flex-1">
-          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">🏠 Dashboard</li>
-          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">📍 Live Map</li>
-          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">📊 Reports</li>
-          <li onClick={() => navigate("/water-data")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">🌊 Water Data</li>
-          <li className="bg-white text-sky-600 p-3 rounded-lg font-bold shadow-md">🔍 Search</li>
-          <li onClick={() => navigate("/readings")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">📈 Readings</li>
-          <li onClick={() => navigate("/profile")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">👤 Profile</li>
+          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ  Dashboard</li>
+          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ“ Live Map</li>
+          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ“Š Reports</li>
+          <li onClick={() => navigate("/water-data")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸŒŠ Water Data</li>
+          <li className="bg-white text-sky-600 p-3 rounded-lg font-bold shadow-md">ðŸ” Search</li>
+          <li onClick={() => navigate("/readings")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ“ˆ Readings</li>
+          <li onClick={() => navigate("/profile")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ‘¤ Profile</li>
         </ul>
       </div>
       <div className="flex-1 p-8">
@@ -50,7 +50,7 @@ const Search = () => {
         </header>
         <div className="mb-6">
           <input type="text" value={query} onChange={handleSearch}
-            placeholder="🔍 Search station name or authority..."
+            placeholder="ðŸ” Search station name or authority..."
             className="w-full p-4 rounded-2xl border-2 border-sky-200 focus:border-sky-500 outline-none text-lg shadow-sm" />
         </div>
         <p className="text-sky-600 mb-4 font-medium">{filtered.length} station(s) found</p>

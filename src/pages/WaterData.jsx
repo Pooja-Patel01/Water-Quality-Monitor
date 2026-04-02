@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const WHO_STANDARDS = {
@@ -35,18 +35,18 @@ const WaterData = () => {
   return (
     <div className="min-h-screen flex bg-sky-50 font-sans">
       <div className="w-64 bg-sky-600 text-white flex flex-col p-6 shadow-xl">
-        <h2 className="text-2xl font-bold mb-8 italic">💧 WQM</h2>
+        <h2 className="text-2xl font-bold mb-8 italic">ðŸ’§ WQM</h2>
         <ul className="space-y-2 flex-1">
-          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">🏠 Dashboard</li>
-          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">📍 Live Map</li>
-          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">📊 Reports</li>
-          <li className="bg-white text-sky-600 p-3 rounded-lg font-bold shadow-md">🌊 Water Data</li>
+          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ  Dashboard</li>
+          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ“ Live Map</li>
+          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ“Š Reports</li>
+          <li className="bg-white text-sky-600 p-3 rounded-lg font-bold shadow-md">ðŸŒŠ Water Data</li>
         </ul>
         <div className="mt-8 bg-sky-700 rounded-xl p-4 text-xs">
           <p className="font-bold mb-2">WHO Standards</p>
-          <p>🟢 pH: 6.5 - 8.5</p>
-          <p>🟢 Turbidity: &lt; 4 NTU</p>
-          <p>🟢 DO: &gt; 5 mg/L</p>
+          <p>ðŸŸ¢ pH: 6.5 - 8.5</p>
+          <p>ðŸŸ¢ Turbidity: &lt; 4 NTU</p>
+          <p>ðŸŸ¢ DO: &gt; 5 mg/L</p>
         </div>
       </div>
       <div className="flex-1 p-8">
@@ -65,7 +65,7 @@ const WaterData = () => {
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="font-bold text-sky-800 text-lg">{item.site_name}</h3>
                     <span className={`text-xs px-2 py-1 rounded-full font-bold ${status === "safe" ? "bg-green-100 text-green-700" : status === "unsafe" ? "bg-red-100 text-red-700" : "bg-sky-100 text-sky-600"}`}>
-                      {status === "safe" ? "✅ Safe" : status === "unsafe" ? "⚠️ Unsafe" : "📡 " + item.source}
+                      {status === "safe" ? "âœ… Safe" : status === "unsafe" ? "âš ï¸ Unsafe" : "ðŸ“¡ " + item.source}
                     </span>
                   </div>
                   <div className="space-y-2">

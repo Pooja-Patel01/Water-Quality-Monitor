@@ -1,4 +1,4 @@
-﻿import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -74,15 +74,15 @@ const Reports = () => {
   return (
     <div className="min-h-screen flex bg-sky-50 font-sans">
       <div className="w-64 bg-sky-600 text-white flex flex-col p-6 shadow-xl">
-        <h2 className="text-2xl font-bold mb-8 italic">💧 WQM</h2>
+        <h2 className="text-2xl font-bold mb-8 italic">ðŸ’§ WQM</h2>
         <ul className="space-y-2 flex-1">
-          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">🏠 Dashboard</li>
-          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">📍 Live Map</li>
-          <li className="bg-white text-sky-600 p-3 rounded-lg font-bold shadow-md">📊 Reports</li>
-          <li onClick={() => navigate("/water-data")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">🌊 Water Data</li>
-          <li onClick={() => navigate("/search")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">🔍 Search</li>
-          <li onClick={() => navigate("/readings")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">📈 Readings</li>
-          <li onClick={() => navigate("/profile")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">👤 Profile</li>
+          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ  Dashboard</li>
+          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ“ Live Map</li>
+          <li className="bg-white text-sky-600 p-3 rounded-lg font-bold shadow-md">ðŸ“Š Reports</li>
+          <li onClick={() => navigate("/water-data")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸŒŠ Water Data</li>
+          <li onClick={() => navigate("/search")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ” Search</li>
+          <li onClick={() => navigate("/readings")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ“ˆ Readings</li>
+          <li onClick={() => navigate("/profile")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ‘¤ Profile</li>
         </ul>
       </div>
       <div className="flex-1 p-8">
@@ -93,7 +93,7 @@ const Reports = () => {
           </div>
           <div className="flex gap-3">
             <button onClick={() => setShowForm(!showForm)} className="bg-green-500 text-white px-6 py-2 rounded-xl font-bold shadow-lg hover:bg-green-600 transition-all">
-              {showForm ? "✕ Close Form" : "+ Submit Report"}
+              {showForm ? "âœ• Close Form" : "+ Submit Report"}
             </button>
             <button onClick={downloadCSV} className="bg-sky-600 text-white px-6 py-2 rounded-xl font-bold shadow-lg hover:bg-sky-700 transition-all">CSV</button>
             <button onClick={downloadPDF} className="bg-white text-sky-600 border border-sky-200 px-6 py-2 rounded-xl font-bold hover:bg-sky-50 transition-all">PDF</button>

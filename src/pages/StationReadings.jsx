@@ -1,4 +1,4 @@
-﻿import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from "recharts";
 
@@ -45,15 +45,15 @@ const StationReadings = () => {
   return (
     <div className="min-h-screen flex bg-sky-50 font-sans">
       <div className="w-64 bg-sky-600 text-white flex flex-col p-6 shadow-xl">
-        <h2 className="text-2xl font-bold mb-8 italic">💧 WQM</h2>
+        <h2 className="text-2xl font-bold mb-8 italic">ðŸ’§ WQM</h2>
         <ul className="space-y-2 flex-1">
-          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">🏠 Dashboard</li>
-          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">📍 Live Map</li>
-          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">📊 Reports</li>
-          <li onClick={() => navigate("/water-data")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">🌊 Water Data</li>
-          <li onClick={() => navigate("/search")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">🔍 Search</li>
-          <li className="bg-white text-sky-600 p-3 rounded-lg font-bold shadow-md">📈 Readings</li>
-          <li onClick={() => navigate("/profile")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">👤 Profile</li>
+          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ  Dashboard</li>
+          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ“ Live Map</li>
+          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ“Š Reports</li>
+          <li onClick={() => navigate("/water-data")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸŒŠ Water Data</li>
+          <li onClick={() => navigate("/search")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ” Search</li>
+          <li className="bg-white text-sky-600 p-3 rounded-lg font-bold shadow-md">ðŸ“ˆ Readings</li>
+          <li onClick={() => navigate("/profile")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer">ðŸ‘¤ Profile</li>
         </ul>
       </div>
       <div className="flex-1 p-8">
@@ -88,12 +88,12 @@ const StationReadings = () => {
               {latestValue ?? "N/A"}
             </p>
             <p className={`text-sm font-bold mt-1 ${isSafe ? "text-green-500" : "text-red-500"}`}>
-              {latestValue !== null ? (isSafe ? "✅ Safe" : "⚠️ Unsafe") : "No data"}
+              {latestValue !== null ? (isSafe ? "âœ… Safe" : "âš ï¸ Unsafe") : "No data"}
             </p>
           </div>
           <div className="bg-white rounded-2xl p-6 border border-sky-100">
             <p className="text-gray-500 text-sm">WHO Safe Range</p>
-            <p className="text-2xl font-bold text-sky-700">{limits.min} – {limits.max}</p>
+            <p className="text-2xl font-bold text-sky-700">{limits.min} â€“ {limits.max}</p>
             <p className="text-sm text-gray-400 mt-1">Acceptable limit</p>
           </div>
           <div className="bg-white rounded-2xl p-6 border border-sky-100">
@@ -103,7 +103,7 @@ const StationReadings = () => {
           </div>
         </div>
         <div className="bg-white rounded-2xl shadow-sm border border-sky-100 p-6">
-          <h3 className="font-bold text-sky-800 text-lg mb-4">{activeParam} Trend — Hourly</h3>
+          <h3 className="font-bold text-sky-800 text-lg mb-4">{activeParam} Trend â€” Hourly</h3>
           {chartData.length > 0 ? (
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={chartData}>

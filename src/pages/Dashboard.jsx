@@ -37,7 +37,7 @@ const Dashboard = () => {
   return (
     <div className="min-h-screen flex bg-sky-50 text-slate-800 font-sans">
       <div className="w-64 bg-sky-600 text-white flex flex-col p-6 shadow-xl">
-        <h2 className="text-2xl font-bold mb-8 italic">💧 WQM</h2>
+        <h2 className="text-2xl font-bold mb-8 italic">ðŸ’§ WQM</h2>
         <div className="mb-8 p-4 bg-sky-700/40 rounded-xl border border-sky-400/30">
           <p className="text-[10px] uppercase tracking-widest text-sky-200">Session</p>
           <p className="font-bold text-lg leading-tight">{userName}</p>
@@ -46,9 +46,9 @@ const Dashboard = () => {
           </span>
         </div>
         <ul className="space-y-2 flex-1">
-          <li onClick={() => navigate("/dashboard")} className="bg-white text-sky-600 p-3 rounded-lg cursor-pointer font-bold shadow-md flex items-center gap-2">🏠 Dashboard</li>
-          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">📍 Live Map View</li>
-          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">📊 Analytics & Reports</li>
+          <li onClick={() => navigate("/dashboard")} className="bg-white text-sky-600 p-3 rounded-lg cursor-pointer font-bold shadow-md flex items-center gap-2">ðŸ  Dashboard</li>
+          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ“ Live Map View</li>
+          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ“Š Analytics & Reports</li>
         </ul>
         <button onClick={handleLogout} className="mt-auto bg-white text-sky-600 hover:bg-sky-50 py-2.5 rounded-lg font-bold transition-all shadow-lg">Logout</button>
       </div>

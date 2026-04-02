@@ -116,7 +116,7 @@ const AuthorityDashboard = () => {
         body: JSON.stringify(newAlert),
       });
       if (res.ok) {
-        alert("✅ Alert issued successfully!");
+        alert("âœ… Alert issued successfully!");
         setShowAlertForm(false);
         setNewAlert({ type: "contamination", message: "", location: "" });
         fetch("http://127.0.0.1:8000/alerts").then(r => r.json()).then(d => setAlerts(Array.isArray(d) ? d : []));
@@ -165,7 +165,7 @@ const AuthorityDashboard = () => {
 
   const getTypeBadge = (type) => {
     const styles = { boil_notice: "bg-amber-100 text-amber-700", contamination: "bg-red-100 text-red-600", outage: "bg-gray-100 text-gray-600" };
-    const icons = { boil_notice: "🔥", contamination: "☣️", outage: "⚡" };
+    const icons = { boil_notice: "ðŸ”¥", contamination: "â˜£ï¸", outage: "âš¡" };
     return (
       <span className={`px-3 py-1 rounded-full text-xs font-black uppercase ${styles[type] || "bg-sky-100 text-sky-600"}`}>
         {icons[type]} {type?.replace("_", " ")}
@@ -185,10 +185,10 @@ const AuthorityDashboard = () => {
   const PARAM_COLORS = { ph: "#0284c7", turbidity: "#f59e0b", do: "#10b981", lead: "#8b5cf6", arsenic: "#ef4444" };
 
   const tabs = [
-    { id: "moderation", label: "📋 Moderation Queue" },
-    { id: "charts", label: "📊 Water Quality Charts" },
-    { id: "alerts", label: "🔔 Alert Management" },
-    ...(userRole === "admin" ? [{ id: "users", label: "👥 User Management" }] : []),
+    { id: "moderation", label: "ðŸ“‹ Moderation Queue" },
+    { id: "charts", label: "ðŸ“Š Water Quality Charts" },
+    { id: "alerts", label: "ðŸ”” Alert Management" },
+    ...(userRole === "admin" ? [{ id: "users", label: "ðŸ‘¥ User Management" }] : []),
   ];
 
   return (
@@ -196,7 +196,7 @@ const AuthorityDashboard = () => {
 
       {/* Sidebar */}
       <div className="w-64 bg-sky-600 text-white flex flex-col p-6 shadow-xl">
-        <h2 className="text-2xl font-bold mb-8 italic">💧 WQM</h2>
+        <h2 className="text-2xl font-bold mb-8 italic">ðŸ’§ WQM</h2>
         <div className="mb-8 p-4 bg-sky-700/40 rounded-xl border border-sky-400/30">
           <p className="text-[10px] uppercase tracking-widest text-sky-200">Session</p>
           <p className="font-bold text-lg leading-tight">{userName}</p>
@@ -205,15 +205,15 @@ const AuthorityDashboard = () => {
           </span>
         </div>
         <ul className="space-y-2 flex-1">
-          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">🏠 Dashboard</li>
-          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">📍 Live Map View</li>
-          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">📊 Reports</li>
-          <li onClick={() => navigate("/water-data")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">🌊 Water Data</li>
-          <li onClick={() => navigate("/search")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">🔍 Search</li>
-          <li onClick={() => navigate("/readings")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">📈 Readings</li>
-          <li onClick={() => navigate("/alerts")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">🔔 Alerts</li>
-          <li className="bg-white text-sky-600 p-3 rounded-lg cursor-pointer font-bold shadow-md flex items-center gap-2">🛡️ Authority Portal</li>
-          <li onClick={() => navigate("/profile")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">👤 Profile</li>
+          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ  Dashboard</li>
+          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ“ Live Map View</li>
+          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ“Š Reports</li>
+          <li onClick={() => navigate("/water-data")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸŒŠ Water Data</li>
+          <li onClick={() => navigate("/search")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ” Search</li>
+          <li onClick={() => navigate("/readings")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ“ˆ Readings</li>
+          <li onClick={() => navigate("/alerts")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ”” Alerts</li>
+          <li className="bg-white text-sky-600 p-3 rounded-lg cursor-pointer font-bold shadow-md flex items-center gap-2">ðŸ›¡ï¸ Authority Portal</li>
+          <li onClick={() => navigate("/profile")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ‘¤ Profile</li>
         </ul>
         <button onClick={handleLogout} className="mt-auto bg-white text-sky-600 hover:bg-sky-50 py-2.5 rounded-lg font-bold transition-all shadow-lg">
           Logout
@@ -234,10 +234,10 @@ const AuthorityDashboard = () => {
         {/* KPI Cards */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           {[
-            { label: "Pending Reports", value: pendingReports.length, color: "text-amber-600", border: "border-amber-400", icon: "📋" },
-            { label: "Active Alerts", value: alerts.length, color: "text-red-600", border: "border-red-400", icon: "🔔" },
-            { label: "Total Reports", value: allReports.length, color: "text-sky-700", border: "border-sky-400", icon: "📊" },
-            { label: "Verified This Month", value: verifiedThisMonth, color: "text-green-600", border: "border-green-400", icon: "✅" },
+            { label: "Pending Reports", value: pendingReports.length, color: "text-amber-600", border: "border-amber-400", icon: "ðŸ“‹" },
+            { label: "Active Alerts", value: alerts.length, color: "text-red-600", border: "border-red-400", icon: "ðŸ””" },
+            { label: "Total Reports", value: allReports.length, color: "text-sky-700", border: "border-sky-400", icon: "ðŸ“Š" },
+            { label: "Verified This Month", value: verifiedThisMonth, color: "text-green-600", border: "border-green-400", icon: "âœ…" },
           ].map((stat, i) => (
             <div key={i} className={`bg-white border-l-4 ${stat.border} rounded-2xl p-6 shadow-sm`}>
               <div className="flex items-center justify-between mb-2">
@@ -283,7 +283,7 @@ const AuthorityDashboard = () => {
                 {loading ? (
                   <tr><td colSpan="6" className="p-8 text-center text-gray-400">Loading reports...</td></tr>
                 ) : pendingReports.length === 0 ? (
-                  <tr><td colSpan="6" className="p-8 text-center text-gray-400">✅ No pending reports — queue is clear!</td></tr>
+                  <tr><td colSpan="6" className="p-8 text-center text-gray-400">âœ… No pending reports â€” queue is clear!</td></tr>
                 ) : (
                   pendingReports.map(report => (
                     <tr key={report.id} className="hover:bg-sky-50/40 transition-colors">
@@ -299,12 +299,12 @@ const AuthorityDashboard = () => {
                           <button
                             onClick={() => handleModerate(report.id, "verified")}
                             className="bg-green-100 text-green-600 hover:bg-green-200 px-3 py-1.5 rounded-lg text-xs font-black transition">
-                            ✅ Verify
+                            âœ… Verify
                           </button>
                           <button
                             onClick={() => handleModerate(report.id, "rejected")}
                             className="bg-red-100 text-red-600 hover:bg-red-200 px-3 py-1.5 rounded-lg text-xs font-black transition">
-                            ❌ Reject
+                            âŒ Reject
                           </button>
                         </div>
                       </td>
@@ -319,7 +319,7 @@ const AuthorityDashboard = () => {
         {/* Water Quality Charts */}
         {activeTab === "charts" && (
           <div>
-            <p className="text-sm text-slate-500 mb-6">Daily average readings across all stations — last 30 days. Reference lines show WHO safe thresholds.</p>
+            <p className="text-sm text-slate-500 mb-6">Daily average readings across all stations â€” last 30 days. Reference lines show WHO safe thresholds.</p>
             {!aggregateData ? (
               <div className="bg-white rounded-3xl p-12 text-center text-gray-400 border border-sky-100">
                 Loading chart data... (Make sure backend is running)
@@ -334,7 +334,7 @@ const AuthorityDashboard = () => {
                         <div>
                           <h3 className="text-lg font-bold text-sky-900">{threshold.label}</h3>
                           <p className="text-xs text-slate-500">
-                            WHO Safe: {threshold.min ? `${threshold.min}–${threshold.max}` : threshold.max ? `< ${threshold.max}` : `> ${threshold.min}`} {threshold.unit}
+                            WHO Safe: {threshold.min ? `${threshold.min}â€“${threshold.max}` : threshold.max ? `< ${threshold.max}` : `> ${threshold.min}`} {threshold.unit}
                           </p>
                         </div>
                         <span className="w-4 h-4 rounded-full" style={{ backgroundColor: PARAM_COLORS[param] }}></span>
@@ -372,7 +372,7 @@ const AuthorityDashboard = () => {
               <button
                 onClick={() => setShowAlertForm(!showAlertForm)}
                 className="bg-red-500 text-white px-6 py-2 rounded-xl font-bold shadow-lg hover:bg-red-600 transition-all">
-                {showAlertForm ? "✕ Close" : "+ Issue Alert"}
+                {showAlertForm ? "âœ• Close" : "+ Issue Alert"}
               </button>
             </div>
 
@@ -386,9 +386,9 @@ const AuthorityDashboard = () => {
                       value={newAlert.type}
                       onChange={e => setNewAlert({ ...newAlert, type: e.target.value })}
                       className="w-full p-3 rounded-xl border-2 border-red-100 focus:border-red-400 outline-none">
-                      <option value="contamination">☣️ Contamination</option>
-                      <option value="boil_notice">🔥 Boil Notice</option>
-                      <option value="outage">⚡ Outage</option>
+                      <option value="contamination">â˜£ï¸ Contamination</option>
+                      <option value="boil_notice">ðŸ”¥ Boil Notice</option>
+                      <option value="outage">âš¡ Outage</option>
                     </select>
                   </div>
                   <div>
@@ -414,7 +414,7 @@ const AuthorityDashboard = () => {
                   onClick={handleCreateAlert}
                   disabled={submitting}
                   className={`px-8 py-3 rounded-xl font-bold text-white transition ${submitting ? "bg-gray-400" : "bg-red-500 hover:bg-red-600"}`}>
-                  {submitting ? "Issuing..." : "🔔 Issue Alert"}
+                  {submitting ? "Issuing..." : "ðŸ”” Issue Alert"}
                 </button>
               </div>
             )}
@@ -446,7 +446,7 @@ const AuthorityDashboard = () => {
                           <button
                             onClick={() => handleDeleteAlert(alert.id)}
                             className="text-red-400 hover:text-red-600 font-bold text-sm transition">
-                            🗑️ Delete
+                            ðŸ—‘ï¸ Delete
                           </button>
                         </td>
                       </tr>

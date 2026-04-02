@@ -71,7 +71,7 @@ const NGODashboard = () => {
         body: JSON.stringify(formData),
       });
       if (res.ok) {
-        alert("✅ Collaboration project submitted successfully!");
+        alert("âœ… Collaboration project submitted successfully!");
         setShowForm(false);
         setFormData({ project_name: "", ngo_name: "", contact_email: "" });
         setFormErrors({});
@@ -110,7 +110,7 @@ const NGODashboard = () => {
 
       {/* Sidebar */}
       <div className="w-64 bg-sky-600 text-white flex flex-col p-6 shadow-xl">
-        <h2 className="text-2xl font-bold mb-8 italic">💧 WQM</h2>
+        <h2 className="text-2xl font-bold mb-8 italic">ðŸ’§ WQM</h2>
         <div className="mb-8 p-4 bg-sky-700/40 rounded-xl border border-sky-400/30">
           <p className="text-[10px] uppercase tracking-widest text-sky-200">Session</p>
           <p className="font-bold text-lg leading-tight">{userName}</p>
@@ -119,15 +119,15 @@ const NGODashboard = () => {
           </span>
         </div>
         <ul className="space-y-2 flex-1">
-          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">🏠 Dashboard</li>
-          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">📍 Live Map View</li>
-          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">📊 Reports</li>
-          <li onClick={() => navigate("/water-data")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">🌊 Water Data</li>
-          <li onClick={() => navigate("/search")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">🔍 Search</li>
-          <li onClick={() => navigate("/readings")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">📈 Readings</li>
-          <li onClick={() => navigate("/alerts")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">🔔 Alerts</li>
-          <li className="bg-white text-sky-600 p-3 rounded-lg cursor-pointer font-bold shadow-md flex items-center gap-2">🤝 NGO Portal</li>
-          <li onClick={() => navigate("/profile")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">👤 Profile</li>
+          <li onClick={() => navigate("/dashboard")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ  Dashboard</li>
+          <li onClick={() => navigate("/map")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ“ Live Map View</li>
+          <li onClick={() => navigate("/reports")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ“Š Reports</li>
+          <li onClick={() => navigate("/water-data")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸŒŠ Water Data</li>
+          <li onClick={() => navigate("/search")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ” Search</li>
+          <li onClick={() => navigate("/readings")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ“ˆ Readings</li>
+          <li onClick={() => navigate("/alerts")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ”” Alerts</li>
+          <li className="bg-white text-sky-600 p-3 rounded-lg cursor-pointer font-bold shadow-md flex items-center gap-2">ðŸ¤ NGO Portal</li>
+          <li onClick={() => navigate("/profile")} className="hover:bg-sky-500 p-3 rounded-lg cursor-pointer transition-colors flex items-center gap-2">ðŸ‘¤ Profile</li>
         </ul>
         <button onClick={handleLogout} className="mt-auto bg-white text-sky-600 hover:bg-sky-50 py-2.5 rounded-lg font-bold transition-all shadow-lg">
           Logout
@@ -146,16 +146,16 @@ const NGODashboard = () => {
           <button
             onClick={() => setShowForm(!showForm)}
             className="bg-green-500 text-white px-6 py-2 rounded-xl font-bold shadow-lg hover:bg-green-600 transition-all">
-            {showForm ? "✕ Close Form" : "+ New Project"}
+            {showForm ? "âœ• Close Form" : "+ New Project"}
           </button>
         </header>
 
         {/* KPI Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {[
-            { label: "Active Projects", value: activeProjects, color: "text-sky-700", border: "border-sky-400", icon: "🤝" },
-            { label: "Reports in System", value: reports.length, color: "text-green-600", border: "border-green-400", icon: "📊" },
-            { label: "Active Alerts", value: alerts.length, color: "text-red-600", border: "border-red-400", icon: "🔔" },
+            { label: "Active Projects", value: activeProjects, color: "text-sky-700", border: "border-sky-400", icon: "ðŸ¤" },
+            { label: "Reports in System", value: reports.length, color: "text-green-600", border: "border-green-400", icon: "ðŸ“Š" },
+            { label: "Active Alerts", value: alerts.length, color: "text-red-600", border: "border-red-400", icon: "ðŸ””" },
           ].map((stat, i) => (
             <div key={i} className={`bg-white border-l-4 ${stat.border} rounded-2xl p-6 shadow-sm`}>
               <div className="flex items-center justify-between mb-2">
@@ -208,7 +208,7 @@ const NGODashboard = () => {
               onClick={handleSubmit}
               disabled={submitting}
               className={`px-8 py-3 rounded-xl font-bold text-white transition ${submitting ? "bg-gray-400" : "bg-green-500 hover:bg-green-600"}`}>
-              {submitting ? "Submitting..." : "🤝 Submit Project"}
+              {submitting ? "Submitting..." : "ðŸ¤ Submit Project"}
             </button>
           </div>
         )}
@@ -219,7 +219,7 @@ const NGODashboard = () => {
             <h2 className="text-xl font-bold text-sky-900">Collaboration Projects ({collaborations.length})</h2>
             <input
               type="text"
-              placeholder="🔍 Search projects..."
+              placeholder="ðŸ” Search projects..."
               value={search}
               onChange={e => setSearch(e.target.value)}
               className="p-2 px-4 rounded-xl border-2 border-sky-200 focus:border-sky-400 outline-none text-sm w-64" />
@@ -260,7 +260,7 @@ const NGODashboard = () => {
                       <button
                         onClick={() => handleDelete(c.id)}
                         className="text-red-400 hover:text-red-600 font-bold text-sm transition">
-                        🗑️ Delete
+                        ðŸ—‘ï¸ Delete
                       </button>
                     </td>
                   </tr>
@@ -272,7 +272,7 @@ const NGODashboard = () => {
 
         {/* Recent Alerts in Area */}
         <div className="mt-8 bg-white border border-red-50 rounded-3xl p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-sky-900 mb-4">🔔 Recent Alerts in Area</h2>
+          <h2 className="text-xl font-bold text-sky-900 mb-4">ðŸ”” Recent Alerts in Area</h2>
           {alerts.length === 0 ? (
             <p className="text-gray-400 text-center py-8">No active alerts</p>
           ) : (
@@ -283,11 +283,11 @@ const NGODashboard = () => {
                   alert.type === "boil_notice" ? "bg-amber-50 border-amber-100" :
                   "bg-gray-50 border-gray-100"}`}>
                   <span className="text-2xl">
-                    {alert.type === "boil_notice" ? "🔥" : alert.type === "contamination" ? "☣️" : "⚡"}
+                    {alert.type === "boil_notice" ? "ðŸ”¥" : alert.type === "contamination" ? "â˜£ï¸" : "âš¡"}
                   </span>
                   <div className="flex-1">
                     <p className="font-bold text-slate-700">{alert.message}</p>
-                    <p className="text-sm text-slate-500">📍 {alert.location} · {alert.issued_at?.slice(0, 10)}</p>
+                    <p className="text-sm text-slate-500">ðŸ“ {alert.location} Â· {alert.issued_at?.slice(0, 10)}</p>
                   </div>
                   <span className={`px-3 py-1 rounded-full text-xs font-black uppercase ${
                     alert.type === "contamination" ? "bg-red-100 text-red-600" :
@@ -299,7 +299,7 @@ const NGODashboard = () => {
               ))}
               {alerts.length > 5 && (
                 <button onClick={() => navigate("/alerts")} className="text-sky-600 font-bold text-sm hover:underline">
-                  View all {alerts.length} alerts →
+                  View all {alerts.length} alerts â†’
                 </button>
               )}
             </div>
