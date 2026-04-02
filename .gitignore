@@ -1,2 +1,5 @@
-/node modules
-/package.json
+﻿node_modules/
+build/
+.cache/
+.env
+.env.local
